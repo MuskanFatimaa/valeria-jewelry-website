@@ -1,0 +1,62 @@
+.carousel-section {
+  background: #4b0e0e; /* maroon */
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  gap: 16px;
+  width: max-content; /* important for seamless scroll */
+  animation: scroll 25s linear infinite; /* smooth infinite scroll */
+}
+
+.carousel-card {
+  flex: 0 0 auto;
+  width: 350px;     /* wider */
+  height: 200px;    /* shorter */
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  position: relative;
+  border: none;     /* rectangle */
+}
+
+.carousel-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.45);
+  color: #fff;
+  text-align: center;
+  padding: 8px;
+  font-size: 1rem;
+  font-family: 'Libre Caslon Display', serif;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.carousel-card:hover .carousel-caption {
+  opacity: 1;
+}
+
+@keyframes scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); } 
+}

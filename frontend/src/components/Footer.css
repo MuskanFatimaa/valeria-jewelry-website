@@ -1,0 +1,111 @@
+.footer-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  width: 100%;
+  background-color: #000; /* black background */
+  overflow: hidden;
+  color: #FDEADB;
+}
+
+.footer-image {
+  height: 100%;
+  flex: 1;
+  overflow: hidden;
+}
+
+.footer-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.footer-content {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.footer-heading {
+  font-family: "Lavishly Yours", cursive;
+  font-size: 5rem;
+  color: #E8C793;
+  margin: 0 0 1rem 0;
+  text-transform: lowercase;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-25%, -10px); /* left and up in one transform */
+}
+
+.footer-links {
+  font-family: "Lavishly Yours", cursive;
+  font-size: 2rem;
+  color: #FDEADB;
+  margin: 0;
+  transform: translate(-20%, -60px); /* left and up in one transform */
+  line-height: 1.6;
+}
+
+/* -------------------- */
+/* Tablet (769px – 1024px) */
+/* -------------------- */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .footer-heading {
+    font-size: 3.5rem;
+    transform: translate(-15%, -5px);
+  }
+
+  .footer-links {
+    font-size: 1.5rem;
+    transform: translate(-10%, -40px);
+  }
+
+  .footer-image {
+    flex: 1;
+  }
+
+  .footer-content {
+    flex: 2;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-section {
+    flex-direction: row; /* stay side by side */
+    height: auto;
+    padding: 1rem;
+  }
+
+  .footer-image {
+    flex: 0 0 80px; /* fixed narrow width */
+    height: 100px;
+  }
+
+  .footer-content {
+    flex: 1;
+    padding-left: 1rem;
+    text-align: left;
+  }
+
+  .footer-heading {
+    font-size: 1.8rem;
+    transform: none;
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-links {
+    font-size: 1rem;
+    transform: none;
+    line-height: 1.4;
+  }
+}
+

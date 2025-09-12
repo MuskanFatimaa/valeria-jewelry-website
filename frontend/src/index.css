@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Lavishly+Yours&family=Libre+Caslon+Display&family=Playfair+Display&family=Castoro+Titling&display=swap');
+
+html, body {
+  margin: 0;
+  padding: 0;
+ overflow-x: hidden; /* prevent horizontal scrolling */
+}
+
+:root {
+  --font-logo: 'Lavishly Yours', cursive;
+  --font-heading: 'Libre Caslon Display', serif;
+  --font-subheading: 'Playfair Display', serif;
+  --font-body: 'Castoro Titling', serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background-color: #fff;
+  color: #222;
+}

@@ -1,0 +1,119 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* prevent horizontal scrolling */
+}
+
+.landing-section {
+  position: relative; /* to position overlay */
+  height: 100vh; /* full viewport height */
+  min-width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: flex;
+  align-items: center;
+  text-align: center;
+  background-color: #311108;
+  padding: 0%;
+  background-size: cover; 
+  overflow: hidden;
+}
+
+.landing-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(49, 17, 8, 0.5); /* adjust 0.5 for opacity */
+  z-index: 1;
+}
+
+.landing-content {
+  position: relative;
+  z-index: 2;
+  padding-left: 2rem;
+  text-align: left;
+}
+
+.landing-title {
+  font-family: "Lavishly Yours";
+  color: #F8CE9F;
+  font-size: 6rem;
+  margin: 0;           
+  line-height: 1;      
+  font-weight: normal; 
+  padding-left: 0.5rem;
+}
+
+.landing-subtitle {
+  font-family: "Libre Caslon Display";
+  color: #FDEADB;
+  font-size: 5.5rem;
+  margin: 0;           
+  line-height: 1.1;    
+  padding-left: 0.5rem;
+}
+
+.landing-btn {
+  background-color: rgba(248, 206, 159, 0.85);   
+  color: #311108;
+  font-family: "Libre Caslon Display", serif;
+  font-size: 1.5rem;
+  padding: 0.8rem 3.5rem;
+  border: none;
+  border-radius: 50px; 
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin-top: 1.5rem;
+  margin-left: 0.5rem;
+}
+
+.landing-btn:hover {
+  background-color: rgba(253, 234, 219, 0.9);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* 📲 Tablet (768px–1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .landing-title {
+    font-size: 4.5rem;
+  }
+
+  .landing-subtitle {
+    font-size: 3rem;
+  }
+
+  .landing-btn {
+    font-size: 1.2rem;
+    padding: 0.7rem 2.5rem;
+  }
+}
+
+/* 📱 Mobile (below 768px) */
+@media (max-width: 768px) {
+  .landing-content {
+    padding-left: 1rem;   /* push away from edge */
+    padding-right: 0;       /* remove left padding */
+    text-align: left;     /* ✅ keep everything right aligned */
+  }
+
+  .landing-title {
+    font-size: 3.5rem;
+    padding-left: 1rem;
+  }
+
+  .landing-subtitle {
+    font-size: 2rem;
+    padding-left: 1rem;
+  }
+
+  .landing-btn {
+    font-size: 1rem;
+    padding: 0.6rem 2rem;
+    margin-left: 1rem;
+  }
+}

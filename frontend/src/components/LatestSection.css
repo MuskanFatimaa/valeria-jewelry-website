@@ -1,0 +1,114 @@
+.latest-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  max-height: 1024px;
+  overflow: hidden;
+}
+
+/* full image background */
+.latest-image {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.latest-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* text container */
+.latest-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  font-family: "Libre Caslon Display", serif;
+  line-height: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-20%);
+}
+
+/* all text — remove bold */
+.latest-content h2,
+.latest-content h3,
+.latest-content h4 {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+}
+
+/* top word */
+.latest-top {
+  color: #F8CE9F;
+  font-size: 4rem;
+  transform: translateX(190%);
+  line-height: 0.8;
+}
+
+/* middle word with gradient */
+.latest-main {
+  background: linear-gradient(90deg, #F8CE9F, #F3AB38);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 15rem;
+  line-height: 0.8;
+}
+
+/* bottom word */
+.latest-bottom {
+  color: #F8CE9F;
+  font-size: 3rem;
+  transform: translateX(40%);
+}
+
+/* -------------------- */
+/* RESPONSIVENESS */
+/* -------------------- */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .latest-content {
+    transform: translateX(0); /* center text */
+  }
+
+  .latest-top {
+    font-size: 3rem;
+    transform: translateX(0);
+  }
+
+  .latest-main {
+    font-size: 8rem;
+  }
+
+  .latest-bottom {
+    font-size: 2rem;
+    transform: translateX(0);
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 768px) {
+  .latest-content {
+    transform: translateX(0);
+    padding: 1rem;
+  }
+
+  .latest-top {
+    font-size: 2rem;
+  }
+
+  .latest-main {
+    font-size: 4rem;
+  }
+
+  .latest-bottom {
+    font-size: 1.5rem;
+  }
+}
