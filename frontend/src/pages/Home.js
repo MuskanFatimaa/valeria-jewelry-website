@@ -48,9 +48,6 @@ const Home = () => {
         <ReviewSection />
       </section>
 
-      <section id="footer">
-        <Footer />
-      </section>
     </div>
   );
 };

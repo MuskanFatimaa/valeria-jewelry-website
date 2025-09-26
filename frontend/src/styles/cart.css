@@ -1,0 +1,56 @@
+/* cart.css - only for cart */
+.cart-page {
+  padding: 3rem 1.5rem;
+  background: #fff; /* stays white for cart */
+  color: #311108;
+  min-height: 60vh;
+}
+
+.cart-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 2rem;
+  align-items: start;
+}
+
+/* cart list */
+.cart-list { background: transparent; padding: 0; }
+.cart-title { font-family: "Libre Caslon Display"; font-size: 2.25rem; margin-bottom: 1rem; color: #311108; text-transform: capitalize; }
+
+.cart-item {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  align-items: center;
+}
+
+.ci-image { width: 120px; height: 120px; object-fit: cover; border-radius: 2px; }
+.ci-body { flex: 1; }
+.ci-title { margin: 0 0 0.25rem 0; font-family: "Libre Caslon Display"; font-size: 1.05rem; color: #311108; }
+.ci-price { margin: 0 0 0.5rem 0; color: #59301E; }
+
+.ci-controls { display:flex; gap:0.5rem; align-items:center; }
+.qty-btn { background:#F8CE9F; border:none; padding:0.2rem 0.6rem; cursor:pointer; font-size:1.2rem; border-radius:6px; }
+.qty { min-width: 28px; text-align:center; display:inline-block; }
+.remove-btn { background:transparent; border:none; margin-left: 0.5rem; cursor:pointer; color:#59301E }
+
+/* summary */
+.cart-summary { background: rgba(49,17,8,0.03); padding:1.2rem; border-radius:4px; height: fit-content; }
+.cart-summary h3 { font-family: "Libre Caslon Display"; margin:0 0 1rem 0; color:#311108; }
+.summary-row { display:flex; justify-content:space-between; margin: 0.5rem 0; color:#311108; }
+.summary-total { display:flex; justify-content:space-between; margin-top:1rem; font-weight:700; font-size:1.15rem; color:#311108; }
+.checkout-btn { width:100%; background:#F8CE9F; color:#311108; padding:0.9rem; border:none; cursor:pointer; border-radius:6px; margin-top:1rem; font-weight:600; }
+
+/* empty state */
+.cart-empty { text-align:center; padding:3rem 1rem; }
+.btn-link { color:#311108; text-decoration:underline; }
+
+/* responsive */
+@media (max-width: 900px) {
+  .cart-container { grid-template-columns: 1fr; padding: 0; }
+  .cart-summary { order: 2; margin-top: 1.5rem; }
+  .cart-item .ci-image { width: 90px; height: 90px; }
+}

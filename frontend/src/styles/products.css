@@ -5,6 +5,7 @@
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
+  height:auto;
   box-sizing: border-box;
   background: #ffffff;
 }
@@ -45,7 +46,7 @@
   max-width: 280px; /* makes all cards equal */
   aspect-ratio: 1 / 1; /* keeps cards square */
   background: #f9f9f9;
-  border-radius: 10px;
+  border-radius: 6px;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -80,3 +81,12 @@
   border-bottom-color: #000;
   font-family: "Lavishly Yours";
 }
+
+/* appended to your products css */
+
+.add-to-cart-btn {
+  font-family: "Libre Caslon Display", serif;
+  font-size: 0.95rem;
+}
+
+
